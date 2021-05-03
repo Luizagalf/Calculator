@@ -1,45 +1,49 @@
 let error = 'Error! Enter the numbers';
 
-function Addition() {
+let addition = () => {
     let one = prompt("Enter the first number");
     let two = prompt("Enter the first number");
     let sum = +one + +two;
     if (Number.isNaN(sum)) {
         alert(error);
-        return NaN;
+        return;
+    }
+    if ((typeof one !== 'undefined') || (typeof two !== 'undefined')) {
+        alert(error);
+        return;
     }
     alert(sum);
     }
     
-function Subtraction() {
+let subtraction = () => {
     let one = prompt("Enter the first number");
     let two = prompt("Enter the first number");
     let sub = one - two;
-    if (Number.isNaN(sub)) {
+    if ((one === undefined) || (two === undefined) || (Number.isNaN(sub))) {
         alert(error);
-        return NaN;
+        return;
     }
     alert(sub);
 }
 
-function Multiplication() {
+let multiplication = () => {
     let one = prompt("Enter the first number");
     let two = prompt("Enter the first number");
     let mul = one * two;
-    if (Number.isNaN(mul)) {
+    if ((typeof one !== 'undefined') || (typeof two !== 'undefined') || (Number.isNaN(mul))) {
         alert(error);
-        return NaN;
+        return;
     }
     alert(mul);
 }
 
-function Division() {
+let division = (one, two) => {
     let one = prompt("Enter the first number");
     let two = prompt("Enter the first number");
     let div = one / two;
-    if (Number.isNaN(div)) {
+    if ((typeof one !== 'undefined') || (typeof two !== 'undefined') || (Number.isNaN(div))) {
         alert(error);
-        return NaN;
+        return;
     }
     alert(div);
 }
