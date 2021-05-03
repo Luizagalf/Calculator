@@ -4,11 +4,7 @@ let addition = () => {
     let one = prompt("Enter the first number");
     let two = prompt("Enter the first number");
     let sum = +one + +two;
-    if (Number.isNaN(sum)) {
-        alert(error);
-        return;
-    }
-    if ((typeof one !== 'undefined') || (typeof two !== 'undefined')) {
+    if ((typeof one !== 'undefined') || (typeof two !== 'undefined') || (Number.isNaN(sum))) {
         alert(error);
         return;
     }
@@ -30,18 +26,18 @@ let multiplication = () => {
     let one = prompt("Enter the first number");
     let two = prompt("Enter the first number");
     let mul = one * two;
-    if ((typeof one !== 'undefined') || (typeof two !== 'undefined') || (Number.isNaN(mul))) {
+    if (Number.isNaN(mul)) {
         alert(error);
         return;
     }
     alert(mul);
 }
 
-let division = (one, two) => {
+let division = () => {
     let one = prompt("Enter the first number");
     let two = prompt("Enter the first number");
     let div = one / two;
-    if ((typeof one !== 'undefined') || (typeof two !== 'undefined') || (Number.isNaN(div))) {
+    if (Number.isNaN(div)) {
         alert(error);
         return;
     }
